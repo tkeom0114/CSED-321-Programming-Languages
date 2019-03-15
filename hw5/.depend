@@ -1,0 +1,13 @@
+hw5.cmo : hw5.cmi
+hw5.cmx : hw5.cmi
+hw5.cmi : uml.cmo
+inout.cmo : uml.cmo
+inout.cmx : uml.cmx
+loop.cmo : uml.cmo inout.cmo
+loop.cmx : uml.cmx inout.cmx
+mainN.cmo : loop.cmo hw5.cmi
+mainN.cmx : loop.cmx hw5.cmx
+mainV.cmo : loop.cmo hw5.cmi
+mainV.cmx : loop.cmx hw5.cmx
+uml.cmo :
+uml.cmx :

@@ -1,0 +1,10 @@
+n := 100;
+i := 0;
+s := 0;
+while ! n < i do
+    if (i / 2) * 2 = i then
+        s := s + i
+    fi;
+    i := i + 1
+end;
+s

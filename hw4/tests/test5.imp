@@ -1,0 +1,20 @@
+// This program tests the Collatz conjecture for all numbers up to m
+// and accumulates the total number of steps in s.
+
+m := 10;
+s := 0;
+while 2 < m do
+  n := m;
+  m := m - 1;
+  while 1 < n do
+    s := s+1;
+    q := n/2;
+    r := 2*q+1;
+    if r<n || r=n then
+      n := 3*n+1    // n becomes 3*n+1 if odd
+    else
+      n := q	    //        or   n/2 if even
+    fi
+  end
+end;
+s

@@ -1,0 +1,8 @@
+n := 100;
+i := 0;
+s := 0;
+while ! n < i do
+    s := s + i;
+    i := i + 1
+end;
+s
