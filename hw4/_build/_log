@@ -1,0 +1,40 @@
+### Starting build.
+# Target: main.ml.depends, tags: { extension:ml, file:main.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules main.ml > main.ml.depends # cached
+# Target: hw4.ml.depends, tags: { extension:ml, file:hw4.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules hw4.ml > hw4.ml.depends
+# Target: imp.ml.depends, tags: { extension:ml, file:imp.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules imp.ml > imp.ml.depends # cached
+# Target: imp.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:imp.cmo, file:imp.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o imp.cmo imp.ml # cached
+# Target: lexer.mll, tags: { extension:mll, file:lexer.mll, lexer, ocaml, ocamllex, quiet }
+/home/tkeom0114/_opam/bin/ocamllex.opt -q lexer.mll # cached
+# Target: lexer.ml.depends, tags: { extension:ml, file:lexer.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules lexer.ml > lexer.ml.depends # cached
+# Target: parser.mly, tags: { extension:mly, file:parser.mly, infer, ocaml, ocamlyacc, parser, quiet }
+/home/tkeom0114/_opam/bin/ocamlyacc parser.mly # cached
+# Target: parser.mli.depends, tags: { extension:mli, file:parser.mli, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules parser.mli > parser.mli.depends # cached
+# Target: parser.cmi, tags: { byte, compile, extension:mli, file:parser.mli, interf, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o parser.cmi parser.mli # cached
+# Target: lexer.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:lexer.cmo, file:lexer.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o lexer.cmo lexer.ml # cached
+# Target: hw4.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:hw4.cmo, file:hw4.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o hw4.cmo hw4.ml
+# Target: main.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o main.cmo main.ml
+# Target: imp.cmx, tags: { compile, extension:cmx, extension:ml, file:imp.cmx, file:imp.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o imp.cmx imp.ml # cached
+# Target: parser.ml.depends, tags: { extension:ml, file:parser.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmx, tags: { compile, extension:cmx, extension:ml, file:parser.cmx, file:parser.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o parser.cmx parser.ml # cached
+# Target: lexer.cmx, tags: { compile, extension:cmx, extension:ml, file:lexer.cmx, file:lexer.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o lexer.cmx lexer.ml # cached
+# Target: hw4.cmx, tags: { compile, extension:cmx, extension:ml, file:hw4.cmx, file:hw4.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o hw4.cmx hw4.ml
+# Target: main.cmx, tags: { compile, extension:cmx, extension:ml, file:main.cmx, file:main.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o main.cmx main.ml # cached
+# Target: main.native, tags: { dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt imp.cmx hw4.cmx parser.cmx lexer.cmx main.cmx -o main.native # cached
+# Compilation successful.
