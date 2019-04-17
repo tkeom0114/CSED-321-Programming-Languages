@@ -1,17 +1,16 @@
-open Uml
-
-
-let rec exp2string lam = match lam with
-    Var x -> x
-  | Lam (v, e) -> "(lam " ^ v ^ ". " ^ (exp2string e) ^ ")" 
-  | App (e1, e2) -> "(" ^ (exp2string e1) ^ " " ^ (exp2string e2) ^ ")" 
+let exp2string e = 
+  let tp = 
+    match Hw6.typeOpt e with
+      Some t -> " : " ^ (Tml.tp2string t)
+    | None -> " has no type."
+  in (Tml.lam2string e) ^ tp
 
 let rec parse_input () = 
   try Parser.parse Lexer.token (Lexing.from_channel stdin)
-  with Parsing.Parse_error -> print_endline "Syntax error";print_string "Uml>:"; flush_all ();
+  with Parsing.Parse_error -> print_endline "Syntax error";print_string "Tml> "; flush_all ();
                               parse_input ()
                                           
-let rec read_line () = let _ = print_string "Uml> "; flush_all () in 
+let rec read_line () = let _ = print_string "Tml> "; flush_all () in 
                        Stream.icons (parse_input ()) (Stream.slazy read_line)
                                     
 let read_file name =
@@ -28,4 +27,3 @@ let read_file name =
     with _ -> close_in channel
   in
   Stream.of_list !exps
-                 

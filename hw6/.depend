@@ -1,0 +1,11 @@
+hw6.cmo : tml.cmo hw6.cmi
+hw6.cmx : tml.cmx hw6.cmi
+hw6.cmi : tml.cmo
+inout.cmo : tml.cmo hw6.cmi
+inout.cmx : tml.cmx hw6.cmx
+loop.cmo : tml.cmo inout.cmo
+loop.cmx : tml.cmx inout.cmx
+main.cmo : loop.cmo
+main.cmx : loop.cmx
+tml.cmo :
+tml.cmx :
