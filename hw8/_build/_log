@@ -1,0 +1,66 @@
+### Starting build.
+# Target: main.ml.depends, tags: { extension:ml, file:main.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules main.ml > main.ml.depends # cached
+# Target: hw8.mli.depends, tags: { extension:mli, file:hw8.mli, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules hw8.mli > hw8.mli.depends # cached
+# Target: env.ml.depends, tags: { extension:ml, file:env.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules env.ml > env.ml.depends # cached
+# Target: env.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:env.cmo, file:env.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o env.cmo env.ml # cached
+# Target: store.ml.depends, tags: { extension:ml, file:store.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules store.ml > store.ml.depends # cached
+# Target: store.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:store.cmo, file:store.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o store.cmo store.ml # cached
+# Target: tml.ml.depends, tags: { extension:ml, file:tml.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules tml.ml > tml.ml.depends # cached
+# Target: tml.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tml.cmo, file:tml.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o tml.cmo tml.ml # cached
+# Target: hw8.cmi, tags: { byte, compile, extension:mli, file:hw8.mli, interf, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o hw8.cmi hw8.mli # cached
+# Target: lexer.mll, tags: { extension:mll, file:lexer.mll, lexer, ocaml, ocamllex, quiet }
+/home/tkeom0114/_opam/bin/ocamllex.opt -q lexer.mll # cached
+# Target: lexer.ml.depends, tags: { extension:ml, file:lexer.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules lexer.ml > lexer.ml.depends # cached
+# Target: parser.mly, tags: { extension:mly, file:parser.mly, infer, ocaml, ocamlyacc, parser, quiet }
+/home/tkeom0114/_opam/bin/ocamlyacc parser.mly # cached
+# Target: parser.mli.depends, tags: { extension:mli, file:parser.mli, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules parser.mli > parser.mli.depends # cached
+# Target: parser.cmi, tags: { byte, compile, extension:mli, file:parser.mli, interf, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o parser.cmi parser.mli # cached
+# Target: lexer.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:lexer.cmo, file:lexer.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o lexer.cmo lexer.ml # cached
+# Target: print.ml.depends, tags: { extension:ml, file:print.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules print.ml > print.ml.depends # cached
+# Target: print.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:print.cmo, file:print.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o print.cmo print.ml # cached
+# Target: validate.ml.depends, tags: { extension:ml, file:validate.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules validate.ml > validate.ml.depends # cached
+# Target: validate.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:validate.cmo, file:validate.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o validate.cmo validate.ml # cached
+# Target: main.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o main.cmo main.ml # cached
+# Target: hw8.ml.depends, tags: { extension:ml, file:hw8.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules hw8.ml > hw8.ml.depends # cached
+# Target: env.cmx, tags: { compile, extension:cmx, extension:ml, file:env.cmx, file:env.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o env.cmx env.ml # cached
+# Target: tml.cmx, tags: { compile, extension:cmx, extension:ml, file:tml.cmx, file:tml.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o tml.cmx tml.ml # cached
+# Target: print.cmx, tags: { compile, extension:cmx, extension:ml, file:print.cmx, file:print.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o print.cmx print.ml # cached
+# Target: store.cmx, tags: { compile, extension:cmx, extension:ml, file:store.cmx, file:store.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o store.cmx store.ml # cached
+# Target: hw8.cmx, tags: { compile, extension:cmx, extension:ml, file:hw8.cmx, file:hw8.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o hw8.cmx hw8.ml # cached
+# Target: parser.ml.depends, tags: { extension:ml, file:parser.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmx, tags: { compile, extension:cmx, extension:ml, file:parser.cmx, file:parser.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o parser.cmx parser.ml # cached
+# Target: lexer.cmx, tags: { compile, extension:cmx, extension:ml, file:lexer.cmx, file:lexer.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o lexer.cmx lexer.ml # cached
+# Target: validate.cmx, tags: { compile, extension:cmx, extension:ml, file:validate.cmx, file:validate.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o validate.cmx validate.ml # cached
+# Target: main.cmx, tags: { compile, extension:cmx, extension:ml, file:main.cmx, file:main.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o main.cmx main.ml # cached
+# Target: main.native, tags: { dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt env.cmx tml.cmx print.cmx store.cmx hw8.cmx parser.cmx lexer.cmx validate.cmx main.cmx -o main.native # cached
+# Compilation successful.

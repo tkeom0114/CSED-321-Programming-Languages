@@ -1,0 +1,4 @@
+type t = T1
+type t = T2 ;;
+
+match 1 with 0 -> T1 | _ -> T2

@@ -1,0 +1,26 @@
+type linked_list = Nil | Node of int * linked_list ref
+;;
+
+let singleton = 
+  fun x -> Node (x, ref Nil) in
+
+let set_next =
+  fun (l1, l2) ->
+    match l1 with
+      Nil -> ()
+    | Node (_,r) -> r := l2 in
+
+let rec sum =
+  fun (l,acc) ->
+    match l with 
+      Nil -> acc
+    | Node (i,r) -> sum (!r, i + acc) in
+
+let l1 = singleton 1 in
+let l2 = singleton 2 in
+let l3 = singleton 3 in
+let _  = set_next (l1, l2) in
+let _  = set_next (l2, l3) in
+
+sum (l1, 0)
+

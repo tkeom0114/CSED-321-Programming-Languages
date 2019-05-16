@@ -1,0 +1,5 @@
+let compose = (fun f -> fun g -> fun x -> g (f x)) in
+let f1 = (fun x -> x + 1) in
+let f2 = (fun x -> x - 1) in
+let f3 = (fun x -> match x with 0 -> true | _ -> false) in
+(compose f1 f2 0, compose f1 f3 0)

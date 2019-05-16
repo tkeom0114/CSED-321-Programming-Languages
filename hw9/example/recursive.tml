@@ -1,0 +1,6 @@
+type t1 = A | B of bool | C of t1
+
+type t2 = D of int * t1 | E of t2
+;;
+
+match D (1, C (B true)) with D(_,C(x)) -> x | _ -> A

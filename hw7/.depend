@@ -1,0 +1,15 @@
+hw7.cmo : tml.cmo hw7.cmi
+hw7.cmx : tml.cmx hw7.cmi
+hw7.cmi : tml.cmo
+inout.cmo : tml.cmo
+inout.cmx : tml.cmx
+loop.cmo : tml.cmo inout.cmo hw7.cmi
+loop.cmx : tml.cmx inout.cmx hw7.cmx
+mainD.cmo : loop.cmo hw7.cmi
+mainD.cmx : loop.cmx hw7.cmx
+mainN.cmo : loop.cmo hw7.cmi
+mainN.cmx : loop.cmx hw7.cmx
+mainV.cmo : loop.cmo hw7.cmi
+mainV.cmx : loop.cmx hw7.cmx
+tml.cmo :
+tml.cmx :

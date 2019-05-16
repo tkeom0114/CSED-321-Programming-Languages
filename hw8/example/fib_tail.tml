@@ -1,0 +1,7 @@
+(* Fibonacci number (tail-recursive) *)
+let rec fib = 
+  fun (k, (n, n')) ->
+    match k with 
+      0 -> n
+    | _ -> fib (k-1, (n',n+n')) in
+fib (5, (1, 1))

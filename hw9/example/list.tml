@@ -1,0 +1,18 @@
+type list = Nil | Cons of (int * list)
+;;
+
+let rec append =
+  fun l ->
+    match l with 
+      Nil -> (fun x -> Cons (x, Nil))
+    | Cons (h, t) -> (fun x -> Cons (h, append t x)) in
+
+let rec reverse =
+  fun l ->
+    match l with 
+      Nil -> Nil
+    | Cons (h, t) -> append (reverse t) h in
+
+let l = Cons (1, Cons (2, Nil)) in
+
+reverse l
