@@ -1,2 +1,2 @@
 let rec gcd= (fun m -> fun n -> match (m,n) with (0,n) -> n | (m,0) -> m | (m,n) -> (match n < m with true -> gcd (m-n) n | false -> gcd m (n-m) )) in
-gcd 1 1
+gcd 16 8

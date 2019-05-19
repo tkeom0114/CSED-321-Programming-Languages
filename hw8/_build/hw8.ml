@@ -17,7 +17,6 @@ type env = location Env.env
  *)
 type value =
      | CLOSURE of mrule * env
-     | CLOSUREREC of id * mrule * env
      | VBOOL of bool
      | VINT of int
      | VPAIR of value * value
@@ -83,7 +82,6 @@ let rec value2exp v = match v with
  * You may modify this function for debugging your code *)
 let rec value2str v = match v with
 | CLOSURE(MRULE(p,e),en) -> "["^ Print.pat2str p ^"->" ^  Print.exp2str e ^"]"
-| CLOSUREREC(x,MRULE(p,e),en) -> "[ rec " ^ x ^ " " ^ Print.pat2str p ^"->" ^  Print.exp2str e ^"]"
 | VLOC(l) -> "loc " ^ string_of_int l
 | _ -> Print.exp2str (value2exp v)
 
@@ -155,10 +153,6 @@ let rec step config = match config with
                                                                 | CLOSURE(MRULE(p,e),en') -> (match pattbind v p en' st with
                                                                                             | (true,en'',st') -> (E(e)::RESTORE(en)::llist'',en'',st')
                                                                                             | _ -> raise Stuck)
-                                                                | CLOSUREREC(x,MRULE(p,e),en') -> (match pattbind v p en' st with
-                                                                                            | (true,en'',st') -> let alloc' = (Store.alloc (CLOSUREREC(x,MRULE(p,e),en')) st')
-                                                                                                in (E(e)::RESTORE(en)::llist'',Env.insert x (fst alloc') en'',snd alloc')
-                                                                                            | _ -> raise Stuck)
                                                                 | VOP(op) -> (V(v)::LOP(op)::llist'',en,st)
                                                                 | VCON(c) -> (V(VCONP(c,v))::llist'',en,st)
                                                                 | _ -> raise Stuck)
@@ -190,8 +184,8 @@ let rec step config = match config with
                                                                 | _ -> raise Stuck)
                                                     | LLETREC(p,e) -> (match (v,p) with   (* 미완성*)
                                                                     | (CLOSURE(mr,en'),PVAR(x))
-                                                                    -> let alloc' = Store.alloc (CLOSUREREC(x,mr,en')) st 
-                                                                        in (E(e)::RESTORE(en)::llist'',Env.insert x (fst alloc') en,snd alloc')
+                                                                    -> let alloc' = Store.alloc v st 
+                                                                        in (E(e)::RESTORE(en)::llist'',Env.insert x (fst alloc') en, Store.update (fst alloc') (CLOSURE(mr,(Env.insert x (fst alloc') en))) (snd alloc'))
                                                                     | _ -> raise Stuck)
                                                     | RESTORE(en') -> (V(v)::llist'',en',st)
                                                     | _ -> raise Stuck))
