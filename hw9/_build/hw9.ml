@@ -120,7 +120,7 @@ let rec subty sub ((fvl,t):(Typed.tyvar list * Typed.ty)) = match sub with
                                                 let (s2,b2') = subty sub ([],b2) in
                                                 (fvl,Typed.TFUN(b1',b2')) 
                           | _ -> (fvl,subv t' a alpha)) 
-                  | fv::fvl'' -> if Typed.TVAR(fv) = alpha then (fvl'',subv t' a alpha)  else let (fvl''',t'') =  subty sub(fvl'',t') in (fv::fvl''',t''))
+                  | fv::fvl'' -> if Typed.TVAR(fv) = alpha then (fvl',subv t' a alpha)  else let (fvl''',t'') =  subty sub(fvl'',t') in (fv::fvl''',t''))
 | COM(sub1,sub2) -> subty sub1 (subty sub2 (fvl,t))
 
 let rec sublist bl al = match (bl,al) with
@@ -155,9 +155,8 @@ let rec wAl ((te,ve):typcon) e = match e with
                 | EQ | LESS -> (ID,Typed.OP(op),Typed.TFUN(Typed.TPAIR(Typed.TINT,Typed.TINT),Typed.TBOOL)))  
 | Tml.VAR(v) -> let (vlist,t) = (try(StrMap.find v ve) with Not_found -> raise TypingError) in 
                 let n = List.length vlist in
-                let beta = getMultiFVar n in 
-                (ID,Typed.VAR(v),Typed.TVAR(t))
-                (*(ID,Typed.VAR(v),snd (subty (sublist beta vlist) (vlist,t))*)
+                let beta = getMultiFVar n in
+                (ID,Typed.VAR(v),snd (subty (sublist beta vlist) (vlist,t)))
 | Tml.CON(c) -> let tn = (try(StrMap.find c te) with Not_found -> raise TypingError) in (ID, Typed.CON(c), Typed.TNAME(tn))
 | Tml.FUN(Tml.MRULE(p,e')) -> let (t'',ve') = pat2bind (te,ve) p  in 
                               let (s',e',t') = wAl (te,StrMap.union f ve ve') e' in 

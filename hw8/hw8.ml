@@ -182,7 +182,7 @@ let rec step config = match config with
                                                     | LLET(p,e) -> (match pattbind v p en st with
                                                                 | (true,en',st') -> (E(e)::RESTORE(en)::llist'',en',st')
                                                                 | _ -> raise Stuck)
-                                                    | LLETREC(p,e) -> (match (v,p) with   (* 미완성*)
+                                                    | LLETREC(p,e) -> (match (v,p) with
                                                                     | (CLOSURE(mr,en'),PVAR(x))
                                                                     -> let alloc' = Store.alloc v st 
                                                                         in (E(e)::RESTORE(en)::llist'',Env.insert x (fst alloc') en, Store.update (fst alloc') (CLOSURE(mr,(Env.insert x (fst alloc') en))) (snd alloc'))

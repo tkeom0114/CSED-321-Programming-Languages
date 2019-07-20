@@ -1,0 +1,64 @@
+### Starting build.
+# Target: main.ml.depends, tags: { extension:ml, file:main.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules main.ml > main.ml.depends # cached
+# Target: hw9.ml.depends, tags: { extension:ml, file:hw9.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules hw9.ml > hw9.ml.depends
+# Target: tml.ml.depends, tags: { extension:ml, file:tml.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules tml.ml > tml.ml.depends # cached
+# Target: tml.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tml.cmo, file:tml.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o tml.cmo tml.ml # cached
+# Target: typed.ml.depends, tags: { extension:ml, file:typed.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules typed.ml > typed.ml.depends # cached
+# Target: typed.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:typed.cmo, file:typed.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o typed.cmo typed.ml # cached
+# Target: lexer.mll, tags: { extension:mll, file:lexer.mll, lexer, ocaml, ocamllex, quiet }
+/home/tkeom0114/_opam/bin/ocamllex.opt -q lexer.mll # cached
+# Target: lexer.ml.depends, tags: { extension:ml, file:lexer.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules lexer.ml > lexer.ml.depends # cached
+# Target: parser.mly, tags: { extension:mly, file:parser.mly, infer, ocaml, ocamlyacc, parser, quiet }
+/home/tkeom0114/_opam/bin/ocamlyacc parser.mly # cached
+# Target: parser.mli.depends, tags: { extension:mli, file:parser.mli, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules parser.mli > parser.mli.depends # cached
+# Target: parser.cmi, tags: { byte, compile, extension:mli, file:parser.mli, interf, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o parser.cmi parser.mli # cached
+# Target: lexer.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:lexer.cmo, file:lexer.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o lexer.cmo lexer.ml # cached
+# Target: print.ml.depends, tags: { extension:ml, file:print.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules print.ml > print.ml.depends # cached
+# Target: print.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:print.cmo, file:print.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o print.cmo print.ml # cached
+# Target: typedprint.ml.depends, tags: { extension:ml, file:typedprint.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules typedprint.ml > typedprint.ml.depends # cached
+# Target: typedprint.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:typedprint.cmo, file:typedprint.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o typedprint.cmo typedprint.ml # cached
+# Target: validate.ml.depends, tags: { extension:ml, file:validate.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules validate.ml > validate.ml.depends # cached
+# Target: validate.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:validate.cmo, file:validate.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o validate.cmo validate.ml # cached
+# Target: hw9.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:hw9.cmo, file:hw9.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o hw9.cmo hw9.ml
+# Target: main.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlc.opt -c -o main.cmo main.ml # cached
+# Target: tml.cmx, tags: { compile, extension:cmx, extension:ml, file:tml.cmx, file:tml.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o tml.cmx tml.ml # cached
+# Target: typed.cmx, tags: { compile, extension:cmx, extension:ml, file:typed.cmx, file:typed.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o typed.cmx typed.ml # cached
+# Target: parser.ml.depends, tags: { extension:ml, file:parser.ml, ocaml, ocamldep, quiet }
+/home/tkeom0114/_opam/bin/ocamldep.opt -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmx, tags: { compile, extension:cmx, extension:ml, file:parser.cmx, file:parser.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o parser.cmx parser.ml # cached
+# Target: lexer.cmx, tags: { compile, extension:cmx, extension:ml, file:lexer.cmx, file:lexer.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o lexer.cmx lexer.ml # cached
+# Target: print.cmx, tags: { compile, extension:cmx, extension:ml, file:print.cmx, file:print.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o print.cmx print.ml # cached
+# Target: typedprint.cmx, tags: { compile, extension:cmx, extension:ml, file:typedprint.cmx, file:typedprint.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o typedprint.cmx typedprint.ml # cached
+# Target: validate.cmx, tags: { compile, extension:cmx, extension:ml, file:validate.cmx, file:validate.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o validate.cmx validate.ml # cached
+# Target: hw9.cmx, tags: { compile, extension:cmx, extension:ml, file:hw9.cmx, file:hw9.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o hw9.cmx hw9.ml
+# Target: main.cmx, tags: { compile, extension:cmx, extension:ml, file:main.cmx, file:main.ml, implem, native, ocaml, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt -c -o main.cmx main.ml # cached
+# Target: main.native, tags: { dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet }
+/home/tkeom0114/_opam/bin/ocamlopt.opt tml.cmx typed.cmx hw9.cmx parser.cmx lexer.cmx print.cmx typedprint.cmx validate.cmx main.cmx -o main.native
+# Compilation successful.
